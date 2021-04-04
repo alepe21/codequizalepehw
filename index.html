@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div id="bigDiv">
+      <h1>Example Quiz!</h1>
+      <div class="quiz-container" style="display: none">
+        <div id="quiz"></div>
+      </div>
+      <div id="start_quiz">
+        <button onClick="hideStart(); startQuiz(); initialTimer();">
+          Start Quiz
+        </button>
+      </div>
+      <span id="myTimer"></span>
+
+      <button id="next" style="visibility: hidden">Next Question</button>
+
+      <span id="answer_type" style="visibility: hidden"></span>
+      <div id="results"></div>
+      <div id="myName" style="visibility: hidden">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Submit" id="submitButton" />
+      </div>
+    </div>
+
+    <div id="showScore" style="visibility: hidden">
+      <h1>HighScores</h1>
+      <h2 id="myScore"></h2>
+      <button
+        id="goBack"
+        onClick="window.location.reload();"
+        style="visibility: hidden"
+      >
+        Go Back
+      </button>
+      <button id="clearScore" onclick="hi()">Clear HighScore</button>
+    </div>
+
+    <script src="script.js" async defer></script>
+  </body>
+</html>
